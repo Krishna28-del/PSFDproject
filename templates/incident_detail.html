@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Incident Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        .incident-detail {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="incident-detail">
+        <h1>{{ incident.title }}</h1>
+        <p>{{ incident.description }}</p>
+        <p>Location: {{ incident.location }}</p>
+        <p>Date Reported: {{ incident.date_reported }}</p>
+        <a href="{% url 'incident_list' %}">Back to Incident List</a>
+        <a href="{% url 'supply_request_edit' %}">Precautions</a>
+    </div>
+</body>
+</html>

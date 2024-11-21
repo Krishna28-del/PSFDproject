@@ -1,0 +1,66 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Disaster Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+            text-align: center; /* Center align text */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px; /* Space below heading */
+        }
+
+        p {
+            color: #555;
+            margin: 0 0 20px; /* Space below paragraph */
+            font-size: 18px; /* Font size for paragraphs */
+        }
+
+        a {
+            display: inline-block; /* Make the link a block element */
+            margin: 10px 0; /* Space around the links */
+            padding: 12px 20px; /* Padding for the button */
+            background-color: #007bff; /* Button color */
+            color: white; /* Button text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* No underline */
+            font-size: 16px; /* Font size */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+        }
+
+        a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        footer {
+            margin-top: 40px; /* Space above footer */
+            color: #666; /* Footer text color */
+            font-size: 14px; /* Footer font size */
+        }
+    </style>
+</head>
+<body>
+    <img src="{% static 'images/Logo.jpg' %}"alt="Company Logo" style="max-width: 200px; margin-bottom: 20px;">
+    <h1>Welcome to Our Disaster Management System</h1>
+    <p>Your one-stop solution for managing disasters efficiently and effectively.</p>
+    <p>Please Select an option below to report the incident:</p>
+    
+    <a href="{% url 'incident_list' %}">View Incident Reports</a>
+
+    <footer>
+        <p>&copy; {{ current_year }} Your Organization Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
